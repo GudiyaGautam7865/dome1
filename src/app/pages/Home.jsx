@@ -396,7 +396,7 @@ export function Home() {
               Start Closing More Deals Today
             </h2>
             <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-              Join the growing network of brokers and builders using a smarter way to manage property
+              Join  growing network of brokers and builders using a smarter way to manage property
               listings.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
