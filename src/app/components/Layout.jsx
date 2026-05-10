@@ -143,43 +143,43 @@ export function Layout() {
       </main>
 
       <footer className="bg-gradient-to-br from-[#003d82] to-[#002558] text-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-6">
             <div>
-              <img src={logoImg} alt="OMD" className="h-16 w-auto mb-3 brightness-0 invert" />
-              <p className="text-blue-100 text-sm">
+              <img src={logoImg} alt="OMD" className="h-12 w-auto mb-3 brightness-0 invert" />
+              <p className="text-blue-100 text-xs">
                 Simplifying property deals for brokers and builders
               </p>
             </div>
             <div>
-              <h3 className="font-medium mb-4 text-[#f7941d]">Quick Links</h3>
-              <div className="flex flex-col space-y-2">
-                <Link to="/" className="text-sm text-blue-100 hover:text-white transition-colors">
+              <h3 className="font-medium mb-3 text-[#f7941d] text-sm">Quick Links</h3>
+              <div className="flex flex-col space-y-1">
+                <Link to="/" className="text-xs text-blue-100 hover:text-white transition-colors">
                   Home
                 </Link>
                 <Link
                   to="/how-it-works"
-                  className="text-sm text-blue-100 hover:text-white transition-colors"
+                  className="text-xs text-blue-100 hover:text-white transition-colors"
                 >
                   How It Works
                 </Link>
                 <Link
                   to="/contact"
-                  className="text-sm text-blue-100 hover:text-white transition-colors"
+                  className="text-xs text-blue-100 hover:text-white transition-colors"
                 >
                   Contact Us
                 </Link>
               </div>
             </div>
             <div>
-              <h3 className="font-medium mb-4 text-[#f7941d]">Contact</h3>
-              <div className="flex flex-col space-y-2 text-sm text-blue-100">
+              <h3 className="font-medium mb-3 text-[#f7941d] text-sm">Contact</h3>
+              <div className="flex flex-col space-y-1 text-xs text-blue-100">
                 <p>Email: omd.brokerassociate@gmail.com</p>
                 <p>Phone: +91-9209182221</p>
               </div>
             </div>
           </div>
-          <div className="border-t border-blue-800 pt-8 text-center text-sm text-blue-100">
+          <div className="border-t border-blue-800 pt-6 text-center text-xs text-blue-100">
             © 2026 OMD Broker Associate. All rights reserved.
           </div>
         </div>
