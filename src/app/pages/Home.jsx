@@ -56,7 +56,7 @@ export function Home() {
                 Find the right property faster. Close deals quicker.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 items-start">
-                <motion.a
+                {/* <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal"
@@ -64,7 +64,7 @@ export function Home() {
                 >
                   <Download className="w-5 h-5" />
                   Download App
-                </motion.a>
+                </motion.a> */}
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to="/contact"
@@ -103,7 +103,7 @@ export function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-10 md:py-12 bg-white">
+      {/* <section className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
@@ -147,7 +147,7 @@ export function Home() {
             </motion.div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Key Benefits Section */}
       <section className="py-10 md:py-12 bg-gray-50">
@@ -202,7 +202,7 @@ export function Home() {
                 ))}
               </div>
               <div className="flex flex-wrap gap-3">
-                <motion.a
+                {/* <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal"
@@ -210,7 +210,7 @@ export function Home() {
                 >
                   <Download className="w-4 h-4" />
                   Google Play
-                </motion.a>
+                </motion.a> */}
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to="/contact"
@@ -222,13 +222,13 @@ export function Home() {
               </div>
             </motion.div>
 
-            <motion.div {...fadeUp} className="flex justify-center">
+            {/* <motion.div {...fadeUp} className="flex justify-center">
               <img
                 src={appScreenshot1}
                 alt="App screenshot"
                 className="rounded-3xl shadow-xl max-w-[180px]"
               />
-            </motion.div>
+            </motion.div> */}
           </div>
         </div>
       </section>

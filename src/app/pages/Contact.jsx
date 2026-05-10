@@ -120,10 +120,10 @@ export function Contact() {
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <a>
                     {/* <a
-                      href="mailto:omd.brokerassociate@gmail.com"
+                      href="mailto:support@omdbrokerassociate.in"
                       className="text-[#003d82] hover:text-[#f7941d] transition-colors text-sm"
                     > */}
-                     omd.brokerassociate@gmail.com
+                     support@omdbrokerassociate.in
                     </a>
                   </div>
                 </div>
