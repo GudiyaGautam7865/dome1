@@ -1,5 +1,5 @@
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
-import emailjs from "@emailjs/browser";
+// import emailjs from "@emailjs/browser";
 import { useState } from "react";
 
 import { motion } from "motion/react";
@@ -32,44 +32,44 @@ export function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
 
-const handleSubmit = (e) => {
-  e.preventDefault();
+// const handleSubmit = (e) => {
+//   e.preventDefault();
 
-  const templateParams = {
-    name: formData.name,
-    email: formData.email,
-    phone: formData.phone,
-    message: formData.message,
-  };
+//   const templateParams = {
+//     name: formData.name,
+//     email: formData.email,
+//     phone: formData.phone,
+//     message: formData.message,
+//   };
 
-  emailjs
-    .send(
-      "service_ohomz9u",
-      "template_krfz1ks",
-      templateParams,
-      "cGKytkNDEH8u25nzb"
-    )
-    .then(
-      () => {
-        setSubmitted(true);
+//   emailjs
+//     .send(
+//       "service_ohomz9u",
+//       "template_krfz1ks",
+//       templateParams,
+//       "cGKytkNDEH8u25nzb"
+//     )
+//     .then(
+//       () => {
+//         setSubmitted(true);
 
-        setTimeout(() => {
-          setSubmitted(false);
+//         setTimeout(() => {
+//           setSubmitted(false);
 
-          setFormData({
-            name: "",
-            email: "",
-            phone: "",
-            message: "",
-          });
-        }, 3000);
-      },
-      (error) => {
-        console.log(error);
-        alert("Failed to send inquiry");
-      }
-    );
-};
+//           setFormData({
+//             name: "",
+//             email: "",
+//             phone: "",
+//             message: "",
+//           });
+//         }, 3000);
+//       },
+//       (error) => {
+//         console.log(error);
+//         alert("Failed to send inquiry");
+//       }
+//     );
+// };
 
   const handleChange = (e) => {
     setFormData({
@@ -118,11 +118,12 @@ const handleSubmit = (e) => {
                   </div>
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                    <a
-                      href="mailto:gudiyagautam78654@gmail.com"
+                    <a>
+                    {/* <a
+                      href="mailto:omd.brokerassociate@gmail.com"
                       className="text-[#003d82] hover:text-[#f7941d] transition-colors text-sm"
-                    >
-                      gudiyagautam78654@gmail.com
+                    > */}
+                     omd.brokerassociate@gmail.com
                     </a>
                   </div>
                 </div>
@@ -172,7 +173,9 @@ const handleSubmit = (e) => {
                     <p className="text-sm">Thank you for contacting us. We'll get back to you soon.</p>
                   </motion.div>
                 ) : (
-                  <form onSubmit={handleSubmit} className="space-y-4">
+  // <form onSubmit={handleSubmit} className="space-y-4">
+                   <form  className="space-y-4">
+                
                     <div className="grid md:grid-cols-2 gap-4">
                       <div>
                         <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1.5">

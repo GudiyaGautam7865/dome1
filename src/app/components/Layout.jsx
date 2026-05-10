@@ -172,7 +172,7 @@ export function Layout() {
             <div>
               <h3 className="font-bold mb-2 text-[#f7941d] text-sm">Contact</h3>
               <div className="flex flex-col space-y-1 text-xs text-blue-100">
-                <p>Email: gudiyagautam78654@gmail.com</p>
+                <p>Email: omd.brokerassociate@gmail.com</p>
                 <p>Phone: +91-9209182221</p>
               </div>
             </div>
