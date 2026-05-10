@@ -68,7 +68,7 @@ export function Home() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-white/10 backdrop-blur-sm text-white rounded-xl hover:bg-white/20 transition-all duration-200 border border-white/20 font-semibold text-base"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-all duration-200 border border-white/40 font-semibold text-base"
                   >
                     Contact Us
                     <ArrowRight className="w-5 h-5" />
@@ -142,7 +142,7 @@ export function Home() {
               <img
                 src={appScreenshot2}
                 alt="App workflow"
-                className="rounded-2xl shadow-lg w-full max-w-[220px] mx-auto"
+                className="rounded-2xl shadow-lg w-full max-w-[180px] mx-auto"
               />
             </motion.div>
           </div>
@@ -226,28 +226,19 @@ export function Home() {
               <img
                 src={appScreenshot1}
                 alt="App screenshot"
-                className="rounded-3xl shadow-xl max-w-[220px]"
+                className="rounded-3xl shadow-xl max-w-[180px]"
               />
             </motion.div>
           </div>
         </div>
       </section>
 
-      {/* Trust Statement */}
-      <motion.section {...fadeUp} className="py-8 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-xl md:text-2xl font-bold text-[#003d82] max-w-4xl mx-auto leading-relaxed">
-            "Because every lead deserves one more chance. Join a community where collaboration builds stronger businesses."
-          </p>
-        </div>
-      </motion.section>
-
       {/* Final CTA */}
       <section className="py-8 bg-gradient-to-r from-[#003d82] to-[#0052a8] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              One More Deal — Because Every Lead Deserves One More Chance
+              Join a community where collaboration builds stronger businesses.
             </h2>
             <p className="text-base mb-6 text-blue-100">
               Join thousands of real estate professionals closing deals faster today.

@@ -17,9 +17,9 @@ export function Layout() {
     <div className="min-h-screen flex flex-col bg-white">
       <header className="sticky top-0 z-50 bg-white border-b border-gray-100 shadow-sm">
         <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex justify-between items-center h-14 sm:h-16">
+          <div className="flex justify-between items-center h-12 sm:h-14">
             <Link to="/" className="flex items-center gap-2">
-              <img src={logoImg} alt="OMD" className="h-8 sm:h-9 w-auto" />
+              <img src={logoImg} alt="OMD" className="h-7 sm:h-8 w-auto" />
               <span className="text-base sm:text-lg font-extrabold text-[#003d82] leading-tight">One More Deal</span>
             </Link>
 

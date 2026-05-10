@@ -32,7 +32,7 @@ export function HowItWorks() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
             <motion.div {...fadeUp}>
-              <div className="space-y-5">
+              <div className="space-y-3">
                 {[
                   { step: 1, title: "Register & Verify", desc: "Quick sign-up with your mobile number followed by professional verification to maintain community trust.", icon: UserPlus },
                   { step: 2, title: "Add Property Listings", desc: "List your residential or commercial properties with all specifications in a structured database.", icon: FileText },
@@ -63,7 +63,7 @@ export function HowItWorks() {
                 transition={{ duration: 5, repeat: Infinity, ease: "easeInOut" }}
                 src={appScreenshot2}
                 alt="How it works"
-                className="relative z-10 rounded-2xl shadow-md max-w-[200px] md:max-w-[240px]"
+                className="relative z-10 rounded-2xl shadow-md max-w-[180px] md:max-w-[210px]"
               />
             </motion.div>
           </div>
