@@ -1,5 +1,7 @@
 import { Mail, Phone, MapPin, Send, CheckCircle } from "lucide-react";
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
+
 import { motion } from "motion/react";
 
 const fadeIn = {
@@ -30,19 +32,44 @@ export function Contact() {
 
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setSubmitted(true);
-    setTimeout(() => {
-      setSubmitted(false);
-      setFormData({
-        name: "",
-        email: "",
-        phone: "",
-        message: "",
-      });
-    }, 3000);
+const handleSubmit = (e) => {
+  e.preventDefault();
+
+  const templateParams = {
+    name: formData.name,
+    email: formData.email,
+    phone: formData.phone,
+    message: formData.message,
   };
+
+  emailjs
+    .send(
+      "service_ohomz9u",
+      "template_krfz1ks",
+      templateParams,
+      "cGKytkNDEH8u25nzb"
+    )
+    .then(
+      () => {
+        setSubmitted(true);
+
+        setTimeout(() => {
+          setSubmitted(false);
+
+          setFormData({
+            name: "",
+            email: "",
+            phone: "",
+            message: "",
+          });
+        }, 3000);
+      },
+      (error) => {
+        console.log(error);
+        alert("Failed to send inquiry");
+      }
+    );
+};
 
   const handleChange = (e) => {
     setFormData({
@@ -92,10 +119,10 @@ export function Contact() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <a
-                      href="mailto:omd.brokerassociate@gmail.com"
+                      href="mailto:gudiyagautam78654@gmail.com"
                       className="text-[#003d82] hover:text-[#f7941d] transition-colors text-sm"
                     >
-                      omd.brokerassociate@gmail.com
+                      gudiyagautam78654@gmail.com
                     </a>
                   </div>
                 </div>

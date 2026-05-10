@@ -1,33 +1,26 @@
 import { Link } from "react-router";
-import { Download, Building2, Users, TrendingUp, Target, Network, Zap, ArrowRight, CheckCircle2, RefreshCw } from "lucide-react";
+import { Download, Building2, Users, Network, Zap, ArrowRight, CheckCircle2, RefreshCw } from "lucide-react";
 import { motion } from "motion/react";
 import appScreenshot1 from "../../imports/image.png";
 import appScreenshot2 from "../../imports/image-1.png";
 
-const fadeIn = {
-  initial: { opacity: 0, y: 20 },
-  animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6 }
+const fadeUp = {
+  initial: { opacity: 0, y: 24 },
+  whileInView: { opacity: 1, y: 0 },
+  viewport: { once: true },
+  transition: { duration: 0.5 }
 };
 
 const slideInLeft = {
-  initial: { opacity: 0, x: -50 },
+  initial: { opacity: 0, x: -40 },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.7 }
+  transition: { duration: 0.6 }
 };
 
 const slideInRight = {
-  initial: { opacity: 0, x: 50 },
+  initial: { opacity: 0, x: 40 },
   animate: { opacity: 1, x: 0 },
-  transition: { duration: 0.7 }
-};
-
-const staggerContainer = {
-  animate: {
-    transition: {
-      staggerChildren: 0.1
-    }
-  }
+  transition: { duration: 0.6 }
 };
 
 export function Home() {
@@ -40,34 +33,34 @@ export function Home() {
           <div className="absolute bottom-0 right-0 w-96 h-96 bg-[#f7941d] rounded-full blur-3xl"></div>
         </div>
 
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20 relative z-10">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-14 relative z-10">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
             <motion.div {...slideInLeft}>
               <motion.div
                 initial={{ scale: 0.8, opacity: 0 }}
                 animate={{ scale: 1, opacity: 1 }}
                 transition={{ duration: 0.5 }}
-                className="inline-block px-4 py-1.5 bg-[#f7941d] rounded-full text-white text-sm font-medium mb-6"
+                className="inline-block px-4 py-1.5 bg-[#f7941d] rounded-full text-white text-sm font-semibold mb-5"
               >
                 🚀 Revolutionizing Property Deals
               </motion.div>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
                 Simplifying Property Deals for Brokers & Builders
               </h1>
-              <p className="text-xl md:text-2xl mb-4 text-blue-100">
+              <p className="text-base md:text-lg mb-3 text-blue-100">
                 A smart and structured platform to replace scattered WhatsApp property sharing with a
                 centralized, searchable system.
               </p>
-              <p className="text-lg md:text-xl mb-8 text-blue-50 flex items-center gap-2">
-                <Zap className="w-6 h-6 text-[#f7941d]" />
+              <p className="text-sm md:text-base mb-6 text-blue-50 flex items-center gap-2">
+                <Zap className="w-5 h-5 text-[#f7941d] flex-shrink-0" />
                 Find the right property faster. Close deals quicker.
               </p>
-              <div className="flex flex-col sm:flex-row gap-4">
+              <div className="flex flex-col sm:flex-row gap-3 items-start">
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal"
-                  className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-[#f7941d] text-white rounded-xl hover:bg-[#e88414] transition-all shadow-lg hover:shadow-xl font-medium text-lg"
+                  className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-[#f7941d] text-white rounded-xl hover:bg-[#e88414] transition-all duration-200 shadow-lg hover:shadow-xl font-semibold text-base"
                 >
                   <Download className="w-5 h-5" />
                   Download App
@@ -75,7 +68,7 @@ export function Home() {
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center justify-center gap-2 px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-xl hover:bg-white/20 transition-all border border-white/20 font-medium text-lg"
+                    className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-white/10 backdrop-blur-sm text-white rounded-xl hover:bg-white/20 transition-all duration-200 border border-white/20 font-semibold text-base"
                   >
                     Contact Us
                     <ArrowRight className="w-5 h-5" />
@@ -84,10 +77,7 @@ export function Home() {
               </div>
             </motion.div>
 
-            <motion.div
-              {...slideInRight}
-              className="relative"
-            >
+            <motion.div {...slideInRight} className="relative">
               <motion.div
                 animate={{ y: [0, -10, 0] }}
                 transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -96,7 +86,7 @@ export function Home() {
                 <img
                   src={appScreenshot1}
                   alt="OMD App Screenshot"
-                  className="rounded-2xl shadow-2xl w-full max-w-sm mx-auto"
+                  className="rounded-2xl shadow-2xl w-full max-w-xs mx-auto"
                 />
               </motion.div>
               <div className="absolute -top-10 -right-10 w-40 h-40 bg-[#f7941d] rounded-full blur-3xl opacity-50"></div>
@@ -113,21 +103,21 @@ export function Home() {
       </section>
 
       {/* How It Works Section */}
-      <section className="py-12 md:py-16 bg-white">
+      <section className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <motion.div {...fadeUp} className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               How It Works
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
               Simplifying property management in 4 easy steps
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid md:grid-cols-2 gap-10 items-center max-w-5xl mx-auto">
-            <div>
-              <div className="bg-[#0052a8] text-white p-8 rounded-2xl shadow-lg">
-                <div className="space-y-6">
+          <div className="grid md:grid-cols-2 gap-8 items-center max-w-5xl mx-auto">
+            <motion.div {...fadeUp}>
+              <div className="bg-[#0052a8] text-white p-6 rounded-2xl shadow-lg">
+                <div className="space-y-4">
                   {[
                     { step: 1, title: "Register & Verify", desc: "Quick sign-up and professional verification to ensure a trusted network." },
                     { step: 2, title: "Add Property Listings", desc: "List your property with all details in a structured, searchable format." },
@@ -135,144 +125,142 @@ export function Home() {
                     { step: 4, title: "Close Deals Faster", desc: "Collaborate effectively and finalize property deals without delays." }
                   ].map((item) => (
                     <div key={item.step} className="flex items-start gap-4">
-                      <div className="w-8 h-8 bg-[#f7941d] rounded-full flex items-center justify-center flex-shrink-0 font-bold">
+                      <div className="w-8 h-8 bg-[#f7941d] rounded-full flex items-center justify-center flex-shrink-0 font-bold text-sm">
                         {item.step}
                       </div>
                       <div>
-                        <h4 className="font-bold text-lg mb-1">{item.title}</h4>
+                        <h4 className="font-bold text-base mb-0.5">{item.title}</h4>
                         <p className="text-blue-100 text-sm">{item.desc}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
 
-            <div className="relative">
+            <motion.div {...fadeUp} className="relative">
               <img
                 src={appScreenshot2}
                 alt="App workflow"
-                className="rounded-2xl shadow-xl w-full max-w-xs mx-auto"
+                className="rounded-2xl shadow-lg w-full max-w-[220px] mx-auto"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Key Benefits Section */}
-      <section className="py-12 md:py-16 bg-gray-50">
+      <section className="py-10 md:py-12 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-10">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <motion.div {...fadeUp} className="text-center mb-8">
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
               Key Benefits
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-base text-gray-600 max-w-2xl mx-auto">
               Why real estate professionals choose One More Deal
             </p>
-          </div>
+          </motion.div>
 
-          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {[
               { icon: Network, title: "Instant Broker Connection", desc: "Direct communication with a verified network of real estate professionals." },
               { icon: Building2, title: "Smart Property Listings", desc: "Organized and searchable database to replace cluttered WhatsApp messages." },
               { icon: RefreshCw, title: "Auto Refresh & Expiry", desc: "Keep your listings updated automatically and remove expired deals seamlessly." },
               { icon: Users, title: "Broker Network", desc: "Build a stronger professional circle and collaborate to close deals faster." }
             ].map((item, index) => (
-              <div
+              <motion.div
                 key={index}
-                className="bg-white p-6 rounded-xl shadow-md border border-gray-100 transition-all"
+                {...fadeUp}
+                transition={{ duration: 0.5, delay: index * 0.08 }}
+                className="bg-white p-5 rounded-xl shadow-md border border-gray-100 hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
               >
-                <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mb-4 text-[#003d82]">
-                  <item.icon className="w-6 h-6" />
+                <div className="w-11 h-11 bg-blue-100 rounded-lg flex items-center justify-center mb-3 text-[#003d82]">
+                  <item.icon className="w-5 h-5" />
                 </div>
-                <h3 className="text-lg font-bold text-gray-900 mb-2">{item.title}</h3>
+                <h3 className="text-base font-bold text-gray-900 mb-1.5">{item.title}</h3>
                 <p className="text-gray-600 text-sm">{item.desc}</p>
-              </div>
+              </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* App Preview / Screenshots */}
-      <section className="py-12 md:py-16 bg-white">
+      {/* App Preview / CTA */}
+      <section className="py-10 md:py-12 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">
+          <div className="grid md:grid-cols-2 gap-10 items-center">
+            <motion.div {...fadeUp}>
+              <h2 className="text-3xl font-bold text-gray-900 mb-5">
                 Ready to transform your property business?
               </h2>
-              <div className="space-y-4 mb-8">
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#f7941d]" />
-                  <span className="text-gray-700">Replace scattered WhatsApp groups</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#f7941d]" />
-                  <span className="text-gray-700">Verified professional network</span>
-                </div>
-                <div className="flex items-center gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-[#f7941d]" />
-                  <span className="text-gray-700">Real-time property matching</span>
-                </div>
+              <div className="space-y-3 mb-7">
+                {["Replace scattered WhatsApp groups", "Verified professional network", "Real-time property matching"].map((text) => (
+                  <div key={text} className="flex items-center gap-3">
+                    <CheckCircle2 className="w-5 h-5 text-[#f7941d] flex-shrink-0" />
+                    <span className="text-gray-700 text-sm">{text}</span>
+                  </div>
+                ))}
               </div>
-              <div className="flex flex-wrap gap-4">
+              <div className="flex flex-wrap gap-3">
                 <motion.a
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal"
-                  className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-xl shadow-lg"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-black text-white rounded-xl shadow-lg hover:bg-gray-900 transition-all duration-200 font-semibold text-sm"
                 >
-                  <Download className="w-5 h-5" />
+                  <Download className="w-4 h-4" />
                   Google Play
                 </motion.a>
                 <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to="/contact"
-                    className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-all font-medium"
+                    className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-all duration-200 font-semibold text-sm"
                   >
                     Contact Sales
                   </Link>
                 </motion.div>
               </div>
-            </div>
-            
-            <div className="flex justify-center">
+            </motion.div>
+
+            <motion.div {...fadeUp} className="flex justify-center">
               <img
                 src={appScreenshot1}
                 alt="App screenshot"
-                className="rounded-3xl shadow-xl max-w-xs"
+                className="rounded-3xl shadow-xl max-w-[220px]"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </section>
 
       {/* Trust Statement */}
-      <section className="py-12 bg-white">
+      <motion.section {...fadeUp} className="py-8 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <p className="text-2xl md:text-3xl font-bold text-[#003d82] max-w-4xl mx-auto leading-relaxed">
+          <p className="text-xl md:text-2xl font-bold text-[#003d82] max-w-4xl mx-auto leading-relaxed">
             "Because every lead deserves one more chance. Join a community where collaboration builds stronger businesses."
           </p>
         </div>
-      </section>
+      </motion.section>
 
       {/* Final CTA */}
-      <section className="py-12 bg-gradient-to-r from-[#003d82] to-[#0052a8] text-white">
+      <section className="py-8 bg-gradient-to-r from-[#003d82] to-[#0052a8] text-white">
         <div className="max-w-4xl mx-auto px-4 text-center">
-          <h2 className="text-2xl md:text-3xl font-bold mb-6">
-            One More Deal — Because Every Lead Deserves One More Chance
-          </h2>
-          <p className="text-lg mb-8 text-blue-100">
-            Join thousands of real estate professionals closing deals faster today.
-          </p>
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Link
-              to="/how-it-works"
-              className="inline-flex items-center gap-2 px-8 py-4 bg-[#f7941d] text-white rounded-xl hover:bg-[#e88414] transition-all shadow-lg font-medium"
-            >
-              Learn More
-              <ArrowRight className="w-5 h-5" />
-            </Link>
+          <motion.div {...fadeUp}>
+            <h2 className="text-2xl md:text-3xl font-bold mb-3">
+              One More Deal — Because Every Lead Deserves One More Chance
+            </h2>
+            <p className="text-base mb-6 text-blue-100">
+              Join thousands of real estate professionals closing deals faster today.
+            </p>
+            <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }} className="inline-block">
+              <Link
+                to="/how-it-works"
+                className="inline-flex items-center gap-2 px-7 py-3 bg-[#f7941d] text-white rounded-xl hover:bg-[#e88414] transition-all duration-200 shadow-lg font-semibold"
+              >
+                Learn More
+                <ArrowRight className="w-5 h-5" />
+              </Link>
+            </motion.div>
           </motion.div>
         </div>
       </section>
