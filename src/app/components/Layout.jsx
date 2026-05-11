@@ -298,7 +298,7 @@ export function Layout() {
               <img
                 src={logoImg}
                 alt="OMD"
-                className="h-7 sm:h-8 w-auto"
+                className="h-15 sm:h-10 w-20"
               />
 
               <span className="text-sm sm:text-lg font-extrabold text-[#003d82] whitespace-nowrap">

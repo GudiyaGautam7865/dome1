@@ -65,7 +65,7 @@ export function Home() {
                   <Download className="w-5 h-5" />
                   Download App
                 </motion.a> */}
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to="/contact"
                     className="inline-flex items-center justify-center gap-2 px-7 py-3 bg-white/20 backdrop-blur-sm text-white rounded-xl hover:bg-white/30 transition-all duration-200 border border-white/40 font-semibold text-base"
@@ -73,7 +73,7 @@ export function Home() {
                     Contact Us
                     <ArrowRight className="w-5 h-5" />
                   </Link>
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
 
@@ -211,14 +211,14 @@ export function Home() {
                   <Download className="w-4 h-4" />
                   Google Play
                 </motion.a> */}
-                <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+                {/* <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
                   <Link
                     to="/contact"
                     className="inline-flex items-center gap-2 px-6 py-3 border border-gray-300 rounded-xl hover:bg-gray-50 transition-all duration-200 font-semibold text-sm"
                   >
                     Contact Sales
                   </Link>
-                </motion.div>
+                </motion.div> */}
               </div>
             </motion.div>
 
