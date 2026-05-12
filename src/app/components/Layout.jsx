@@ -68,7 +68,7 @@ export function Layout() {
               />
 
               <span className="text-sm sm:text-lg font-extrabold text-[#003d82] whitespace-nowrap">
-                One More Deal
+                One More Dasdfgheal
               </span>
             </Link>
 
