@@ -33,7 +33,7 @@ export function Layout() {
   // Android
   else if (/android/i.test(userAgent)) {
     window.open(
-      'https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal',
+      'https://apps.apple.com/in/app/one-more-deal/id6763114774',
       '_blank'
     );
   } 
