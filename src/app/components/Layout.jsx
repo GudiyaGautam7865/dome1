@@ -33,7 +33,7 @@ export function Layout() {
   // Android
   else if (/android/i.test(userAgent)) {
     window.open(
-      'https://apps.apple.com/in/app/one-more-deal/id6763114774',
+      'https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal',
       '_blank'
     );
   } 
@@ -68,7 +68,7 @@ export function Layout() {
               />
 
               <span className="text-sm sm:text-lg font-extrabold text-[#003d82] whitespace-nowrap">
-                One More Dasdfgheal
+                One More Deal
               </span>
             </Link>
 
@@ -156,13 +156,14 @@ export function Layout() {
             </Link>
 
             {/* MOBILE DOWNLOAD */}
-            <a
-              href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal"
-              className="shrink-0 inline-flex items-center gap-1 px-3 py-2 bg-gradient-to-r from-[#003d82] to-[#0052a8] text-white rounded-xl text-xs font-semibold"
-            >
-              <Download className="w-4 h-4" />
-              Download
-            </a>
+         
+<a
+  onClick={handleDownload}
+  className="shrink-0 inline-flex items-center gap-1 px-3 py-2 bg-gradient-to-r from-[#003d82] to-[#0052a8] text-white rounded-xl text-xs font-semibold cursor-pointer"
+>
+  <Download className="w-4 h-4" />
+  Download
+</a>
 
           </div>
         </nav>
