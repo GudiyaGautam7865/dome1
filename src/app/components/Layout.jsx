@@ -19,6 +19,33 @@ export function Layout() {
     return location.pathname.startsWith(path);
   };
 
+
+  const handleDownload = () => {
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+  // iPhone / iPad / iOS
+  if (/iPad|iPhone|iPod/.test(userAgent) && !window.MSStream) {
+    window.open(
+      'https://apps.apple.com/in/app/one-more-deal/id6763114774',
+      '_blank'
+    );
+  } 
+  // Android
+  else if (/android/i.test(userAgent)) {
+    window.open(
+      'https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal',
+      '_blank'
+    );
+  } 
+  // Default fallback
+  else {
+    window.open(
+      'https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal',
+      '_blank'
+    );
+  }
+};
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
 
@@ -27,7 +54,7 @@ export function Layout() {
         <nav className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
 
           {/* TOP BAR */}
-          <div className="flex items-center justify-between h-14">
+          <div className="flex items-center justify-between h-24">
 
             {/* LOGO */}
             <Link
@@ -37,7 +64,7 @@ export function Layout() {
               <img
                 src={logoImg}
                 alt="OMD"
-                className="h-15 sm:h-15 w-20"
+                className="h-20 sm:h-20 w-25"
               />
 
               <span className="text-sm sm:text-lg font-extrabold text-[#003d82] whitespace-nowrap">
@@ -82,13 +109,13 @@ export function Layout() {
               </Link>
 
               {/* DOWNLOAD BUTTON */}
-              <a
-                href="https://play.google.com/store/apps/details?id=com.onemoredeal.one_more_deal"
-                className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#003d82] to-[#0052a8] text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm font-semibold"
-              >
-                <Download className="w-4 h-4" />
-                Download
-              </a>
+            <a
+  onClick={handleDownload}
+  className="inline-flex items-center gap-2 px-4 py-2 bg-gradient-to-r from-[#003d82] to-[#0052a8] text-white rounded-xl hover:shadow-lg hover:scale-105 transition-all duration-200 text-sm font-semibold cursor-pointer"
+>
+  <Download className="w-4 h-4" />
+  Download
+</a>
             </div>
           </div>
 
