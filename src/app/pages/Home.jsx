@@ -42,18 +42,18 @@ export function Home() {
                 transition={{ duration: 0.5 }}
                 className="inline-block px-4 py-1.5 bg-[#f7941d] rounded-full text-white text-sm font-semibold mb-5"
               >
-                🚀 Revolutionizing Property Deals
+                🚀 Pune's #1 Broker & Builder Network App
               </motion.div>
               <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold mb-4 leading-tight">
-                Simplifying Property Deals for Brokers & Builders
+                Broker & Builder Network for Property Deals in Pune
               </h1>
               <p className="text-base md:text-lg mb-3 text-blue-100">
-                A smart and structured platform to replace scattered WhatsApp property sharing with a
-                centralized, searchable system.
+                One More Deal — a structured property listing app replacing scattered WhatsApp groups.
+                Find resale, rental, commercial properties & plots with verified Pune brokers.
               </p>
               <p className="text-sm md:text-base mb-6 text-blue-50 flex items-center gap-2">
                 <Zap className="w-5 h-5 text-[#f7941d] flex-shrink-0" />
-                Find the right property faster. Close deals quicker.
+                Real estate broker app · Property listing platform · Broker association Pune
               </p>
               <div className="flex flex-col sm:flex-row gap-3 items-start">
                 {/* <motion.a
@@ -107,10 +107,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              How It Works
+              How One More Deal Works
             </h2>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Simplifying property management in 4 easy steps
+              Broker property management in 4 easy steps — no more WhatsApp chaos
             </p>
           </motion.div>
 
@@ -154,10 +154,10 @@ export function Home() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div {...fadeUp} className="text-center mb-8">
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-3">
-              Key Benefits
+              Why Pune Brokers & Builders Choose One More Deal
             </h2>
             <p className="text-base text-gray-600 max-w-2xl mx-auto">
-              Why real estate professionals choose One More Deal
+              The complete broker network app for resale, rental, commercial &amp; plot listings
             </p>
           </motion.div>
 
@@ -191,10 +191,10 @@ export function Home() {
           <div className="grid md:grid-cols-2 gap-10 items-center">
             <motion.div {...fadeUp}>
               <h2 className="text-3xl font-bold text-gray-900 mb-5">
-                Ready to transform your property business?
+                Ready to replace WhatsApp property groups?
               </h2>
               <div className="space-y-3 mb-7">
-                {["Replace scattered WhatsApp groups", "Verified professional network", "Real-time property matching"].map((text) => (
+                {["Replace scattered WhatsApp property groups", "Verified broker & builder network — Pune", "Resale, rental, commercial & plot listings"].map((text) => (
                   <div key={text} className="flex items-center gap-3">
                     <CheckCircle2 className="w-5 h-5 text-[#f7941d] flex-shrink-0" />
                     <span className="text-gray-700 text-sm">{text}</span>
@@ -238,7 +238,7 @@ export function Home() {
         <div className="max-w-4xl mx-auto px-4 text-center">
           <motion.div {...fadeUp}>
             <h2 className="text-2xl md:text-3xl font-bold mb-3">
-              Join a community where collaboration builds stronger businesses.
+              One More Deal — Pune's Broker &amp; Builder Network
             </h2>
             <p className="text-base mb-6 text-blue-100">
               Join thousands of real estate professionals closing deals faster today.

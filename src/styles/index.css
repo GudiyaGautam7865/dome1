@@ -1,7 +1,5 @@
-@import './fonts.css';
 @import './tailwind.css';
-@import './theme.css';
-/* Add in App.css or index.css */
+@import './globals.css';
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
